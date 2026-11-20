@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+</head>
+<body style="text-align: center; font-family: Arial; background: lightyellow;">
+
+    <h1>Password Generator</h1>
+    <p>Button dabao, strong password pao</p>
+
+    <input type="text" id="box" placeholder="Password yaha aayega" style="padding: 10px; font-size: 18px;">
+
+    <br><br>
+    <button onclick="makePass()" style="padding: 10px 20px; background: orange;">Generate Password</button>
+
+    <script>
+        function makePass() {
+            let sab = "ABCabc123@#";
+            let ans = "";
+            for(let i=0; i<8; i++) {
+                let num = Math.floor(Math.random() * sab.length);
+                ans = ans + sab[num];
+            }
+            document.getElementById("box").value = ans;
+        }
+    </script>
+
+</body>
+</html>
